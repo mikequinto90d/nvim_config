@@ -1,5 +1,6 @@
 require("mike90ds.settings")
 require("mike90ds.remap")
+require("mike90ds.plugins")
 
 local has = vim.fn.has
 local is_linux = has("unix")
