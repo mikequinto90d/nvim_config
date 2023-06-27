@@ -113,8 +113,8 @@ cmp.setup({
         { name = "nvim_lsp", max_item_count = 11, priority = 10, keyword_length = 3 }, -- lsp as source for autocompletion
         { name = "nvim_lsp_signature_help", priority = 9 }, -- displays args for current function
         { name = "path", max_item_count = 5, priority = 7, keyword_length = 2 }, -- file system paths
-        -- { name = "luasnip", max_item_count = 4, priority = 5, keyword_length = 3 }, -- snippets
-        -- { name = "buffer", max_item_count = 5, priority = 4, keyword_length = 4 }, -- text within current buffer
+        { name = "luasnip", max_item_count = 4, priority = 5, keyword_length = 3 }, -- snippets
+        { name = "buffer", max_item_count = 5, priority = 4, keyword_length = 4 }, -- text within current buffer
         -- { name = "dictionary", max_item_count = 8, priority = 4, keyword_length = 2 }, -- english dictionary
     }),
     -- https://github.com/hrsh7th/nvim-cmp/issues/183

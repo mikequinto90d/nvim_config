@@ -96,10 +96,16 @@ return require("packer").startup(function(use)
             require("mike90ds.lazyload.nvimcmp")
         end,
     })
+    use({ "hrsh7th/cmp-buffer", lock = true, disable = false })
+    use({ "hrsh7th/cmp-path", lock = true, disable = false })
     use({ "hrsh7th/cmp-cmdline", lock = true })
+    use({ "hrsh7th/cmp-nvim-lsp-signature-help", lock = true, disable = false })
 
     -- snippets
     use({ "L3MON4D3/LuaSnip", lock = true, disable = false })
+    use({ "hrsh7th/vim-vsnip", disable = false })
+    use({ "saadparwaiz1/cmp_luasnip", lock = true, disable = false })
+    use({ "rafamadriz/friendly-snippets", lock = true, disable = false })
 
     -- managing and installing LSP servers (that mason will install)
     use({ "williamboman/mason.nvim", lock = true })

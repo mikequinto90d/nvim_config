@@ -92,6 +92,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Loyd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "C:\\Users\\Loyd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
   ["cmp-cmdline"] = {
     loaded = true,
     path = "C:\\Users\\Loyd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-cmdline",
@@ -101,6 +106,26 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Loyd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lsp-signature-help"] = {
+    loaded = true,
+    path = "C:\\Users\\Loyd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp-signature-help",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "C:\\Users\\Loyd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "C:\\Users\\Loyd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "C:\\Users\\Loyd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -229,7 +254,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["tabline.nvim"] = {
-    config = { "\27LJ\2\n—\4\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0'\2\f\0B\0\2\1K\0\1\0©\1              set guioptions-=e \" Use showtabline in gui vim\n              set sessionoptions+=tabpages,globals \" store tabpages and globals in session\n            \bcmd\bvim\foptions\23section_separators\1\3\0\0\bî‚´\bî‚¶\25component_separators\1\0\n\18show_devicons\2\21show_tabs_always\2\27max_bufferline_percent\3B\19show_tabs_only\1\20modified_italic\2\18modified_icon\a+ \23show_filename_only\2 tabline_show_last_separator\2\15show_bufnr\1\fcolored\2\1\3\0\0\bî˜¡\bî˜¡\1\0\1\venable\2\nsetup\ftabline\frequire\0" },
+    config = { "\27LJ\2\n—\4\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0'\2\f\0B\0\2\1K\0\1\0©\1              set guioptions-=e \" Use showtabline in gui vim\n              set sessionoptions+=tabpages,globals \" store tabpages and globals in session\n            \bcmd\bvim\foptions\23section_separators\1\3\0\0\bî‚´\bî‚¶\25component_separators\1\0\n\19show_tabs_only\1\20modified_italic\2\18modified_icon\a+ \23show_filename_only\2 tabline_show_last_separator\2\15show_bufnr\1\fcolored\2\18show_devicons\2\21show_tabs_always\2\27max_bufferline_percent\3B\1\3\0\0\bî˜¡\bî˜¡\1\0\1\venable\2\nsetup\ftabline\frequire\0" },
     loaded = true,
     path = "C:\\Users\\Loyd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tabline.nvim",
     url = "https://github.com/kdheepak/tabline.nvim"
@@ -273,6 +298,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Loyd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-surround",
     url = "https://github.com/tpope/vim-surround"
   },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "C:\\Users\\Loyd\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
+  },
   ["zen-mode.nvim"] = {
     commands = { "ZenMode" },
     loaded = false,
@@ -284,39 +314,39 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: impatient.nvim
-time([[Config for impatient.nvim]], true)
-require('impatient')
-time([[Config for impatient.nvim]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\n<\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0!mike90ds.lazyload.toggleterm\frequire\0", "config", "toggleterm.nvim")
-time([[Config for toggleterm.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require('mike90ds.lazyload.autopairs')
-time([[Config for nvim-autopairs]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require('mike90ds.lazyload.treesitter')
-time([[Config for nvim-treesitter]], false)
--- Config for: tabline.nvim
-time([[Config for tabline.nvim]], true)
-try_loadstring("\27LJ\2\n—\4\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0'\2\f\0B\0\2\1K\0\1\0©\1              set guioptions-=e \" Use showtabline in gui vim\n              set sessionoptions+=tabpages,globals \" store tabpages and globals in session\n            \bcmd\bvim\foptions\23section_separators\1\3\0\0\bî‚´\bî‚¶\25component_separators\1\0\n\18show_devicons\2\21show_tabs_always\2\27max_bufferline_percent\3B\19show_tabs_only\1\20modified_italic\2\18modified_icon\a+ \23show_filename_only\2 tabline_show_last_separator\2\15show_bufnr\1\fcolored\2\1\3\0\0\bî˜¡\bî˜¡\1\0\1\venable\2\nsetup\ftabline\frequire\0", "config", "tabline.nvim")
-time([[Config for tabline.nvim]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\30mike90ds.lazyload.nvimcmp\frequire\0", "config", "nvim-cmp")
 time([[Config for nvim-cmp]], false)
+-- Config for: tabline.nvim
+time([[Config for tabline.nvim]], true)
+try_loadstring("\27LJ\2\n—\4\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0'\2\f\0B\0\2\1K\0\1\0©\1              set guioptions-=e \" Use showtabline in gui vim\n              set sessionoptions+=tabpages,globals \" store tabpages and globals in session\n            \bcmd\bvim\foptions\23section_separators\1\3\0\0\bî‚´\bî‚¶\25component_separators\1\0\n\19show_tabs_only\1\20modified_italic\2\18modified_icon\a+ \23show_filename_only\2 tabline_show_last_separator\2\15show_bufnr\1\fcolored\2\18show_devicons\2\21show_tabs_always\2\27max_bufferline_percent\3B\1\3\0\0\bî˜¡\bî˜¡\1\0\1\venable\2\nsetup\ftabline\frequire\0", "config", "tabline.nvim")
+time([[Config for tabline.nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\n<\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0!mike90ds.lazyload.toggleterm\frequire\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
+-- Config for: impatient.nvim
+time([[Config for impatient.nvim]], true)
+require('impatient')
+time([[Config for impatient.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require('mike90ds.lazyload.treesitter')
+time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require('mike90ds.lazyload.autopairs')
+time([[Config for nvim-autopairs]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-ts-autotag ]]
 vim.cmd [[ packadd telescope.nvim ]]
 vim.cmd [[ packadd telescope-live-grep-args.nvim ]]
 
 -- Config for: telescope-live-grep-args.nvim
 try_loadstring("\27LJ\2\n(\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0À\19live_grep_argsî\1\1\0\a\0\f\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\4\0009\0\3\0006\1\5\0009\1\6\0019\1\a\1'\3\b\0'\4\t\0003\5\n\0005\6\v\0B\1\5\0012\0\0€K\0\1\0\1\0\1\tdesc6[Telescope] live grep with args (defaults to cwd)\0\16<leader>trg\6n\bset\vkeymap\bvim\15extensions\19live_grep_args\19load_extension\14telescope\frequire\0", "config", "telescope-live-grep-args.nvim")
 
-vim.cmd [[ packadd nvim-ts-autotag ]]
 time([[Sequenced loading]], false)
 
 -- Command lazy-loads
