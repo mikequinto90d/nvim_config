@@ -6,7 +6,7 @@ end
 treesitter.setup({
     -- A list of parser names, or "all"
     ensure_installed = {
-        "help",
+        -- "help",
         "javascript",
         "typescript",
         "lua",

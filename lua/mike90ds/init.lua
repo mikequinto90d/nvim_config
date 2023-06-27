@@ -1,6 +1,12 @@
 require("mike90ds.settings")
 require("mike90ds.remap")
 require("mike90ds.plugins")
+require("mike90ds.colorscheme")
+require("mike90ds.lsp.mason")
+require("mike90ds.lsp.lspsaga")
+require("mike90ds.lsp.lspconfig")
+require("mike90ds.lsp.null-ls")
+require("mike90ds.re_command")
 
 local has = vim.fn.has
 local is_linux = has("unix")

@@ -13,7 +13,7 @@ if not setup then
     return
 end
 
-if is_wsl then
+if is_wsl or is_win then
 -- if is_wsl or is_win then
     comment.setup({
         pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
@@ -21,7 +21,9 @@ if is_wsl then
             block = "gb",
         },
     })
-elseif is_linux or is_win then
+-- elseif is_linux then
+elseif is_win then
+-- elseif is_linux or is_win then
     comment.setup({
         pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
         toggler = {
