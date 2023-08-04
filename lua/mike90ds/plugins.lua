@@ -25,7 +25,7 @@ end
 
 return require("packer").startup(function(use)
     use({ "lewis6991/impatient.nvim", config = [[require('impatient')]], lock = true })
-    use({ "wbthomason/packer.nvim" })
+    use({ "wbthomason/packer.nvim", lock = true })
     use({ "nvim-lua/plenary.nvim", lock = true })
 
     -- use({ "olimorris/onedarkpro.nvim", lock = true })
@@ -151,7 +151,7 @@ return require("packer").startup(function(use)
 
     -- snippets
     use({ "L3MON4D3/LuaSnip", lock = true, disable = false })
-    use({ "hrsh7th/vim-vsnip", disable = false })
+    use({ "hrsh7th/vim-vsnip", disable = false, lock = true })
     use({ "saadparwaiz1/cmp_luasnip", lock = true, disable = false })
     use({ "rafamadriz/friendly-snippets", lock = true, disable = false })
 
@@ -201,15 +201,15 @@ return require("packer").startup(function(use)
             -- require("configs.toggleterm")
             require("mike90ds.lazyload.toggleterm")
         end,
-        -- lock = true,
-        -- cmd = { "ToggleTerm", "ToggleTermToggleAll" },
-        -- keys = {
-        --     "<leader>tpy",
-        --     "<leader>lz",
-        --     "<leader>fl",
-        --     "<C-`>",
-        --     "<C-\\>",
-        -- },
+        lock = true,
+        cmd = { "ToggleTerm", "ToggleTermToggleAll" },
+        keys = {
+            "<leader>tpy",
+            "<leader>lz",
+            "<leader>fl",
+            "<C-`>",
+            "<C-\\>",
+        },
     })
 
     --scrollbar and other UI elements

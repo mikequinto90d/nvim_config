@@ -177,7 +177,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["neo-tree.nvim"] = {
-    config = { "\27LJ\2\n�\6\0\0\6\0\27\0+6\0\0\0009\0\1\0009\0\2\0'\2\3\0005\3\4\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\5\0005\3\6\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\a\0005\3\b\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\t\0005\3\n\0B\0\3\0016\0\v\0'\2\f\0B\0\2\0029\0\r\0005\2\14\0005\3\16\0005\4\15\0=\4\17\0035\4\18\0=\4\19\0035\4\21\0005\5\20\0=\5\22\4=\4\23\3=\3\24\0025\3\25\0=\3\26\2B\0\2\1K\0\1\0\15filesystem\1\0\1\26hijack_netrw_behavior\rdisabled\30default_component_configs\15git_status\fsymbols\1\0\0\1\0\t\14untracked\b\fignored\b\rmodified\5\runstaged\b\vstaged\b\rconflict\b\frenamed\b\fdeleted\b✖\nadded\5\ticon\1\0\5\fdefault\6*\18folder_closed\b\14highlight\20NeoTreeFileIcon\16folder_open\b\17folder_empty\bﰊ\14container\1\0\0\1\0\1\26enable_character_fade\2\1\0\4\25close_if_last_window\1\23enable_diagnostics\2\23popup_border_style\frounded\22enable_git_status\2\nsetup\rneo-tree\frequire\1\0\2\vtexthl\23DiagnosticSignHint\ttext\b\23DiagnosticSignHint\1\0\2\vtexthl\23DiagnosticSignInfo\ttext\t \23DiagnosticSignInfo\1\0\2\vtexthl\23DiagnosticSignWarn\ttext\t \23DiagnosticSignWarn\1\0\2\vtexthl\24DiagnosticSignError\ttext\t \24DiagnosticSignError\16sign_define\afn\bvim\0" },
+    config = { "\27LJ\2\n�\6\0\0\6\0\27\0+6\0\0\0009\0\1\0009\0\2\0'\2\3\0005\3\4\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\5\0005\3\6\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\a\0005\3\b\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\t\0005\3\n\0B\0\3\0016\0\v\0'\2\f\0B\0\2\0029\0\r\0005\2\14\0005\3\16\0005\4\15\0=\4\17\0035\4\18\0=\4\19\0035\4\21\0005\5\20\0=\5\22\4=\4\23\3=\3\24\0025\3\25\0=\3\26\2B\0\2\1K\0\1\0\15filesystem\1\0\1\26hijack_netrw_behavior\17open_default\30default_component_configs\15git_status\fsymbols\1\0\0\1\0\t\runstaged\b\rconflict\b\rmodified\5\14untracked\b\frenamed\b\fdeleted\b✖\vstaged\b\nadded\5\fignored\b\ticon\1\0\5\16folder_open\b\18folder_closed\b\fdefault\6*\14highlight\20NeoTreeFileIcon\17folder_empty\bﰊ\14container\1\0\0\1\0\1\26enable_character_fade\2\1\0\4\23popup_border_style\frounded\25close_if_last_window\1\23enable_diagnostics\2\22enable_git_status\2\nsetup\rneo-tree\frequire\1\0\2\vtexthl\23DiagnosticSignHint\ttext\b\23DiagnosticSignHint\1\0\2\vtexthl\23DiagnosticSignInfo\ttext\t \23DiagnosticSignInfo\1\0\2\vtexthl\23DiagnosticSignWarn\ttext\t \23DiagnosticSignWarn\1\0\2\vtexthl\24DiagnosticSignError\ttext\t \24DiagnosticSignError\16sign_define\afn\bvim\0" },
     loaded = true,
     path = "C:\\Users\\Work\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
@@ -279,9 +279,13 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["toggleterm.nvim"] = {
+    commands = { "ToggleTerm", "ToggleTermToggleAll" },
     config = { "\27LJ\2\n<\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0!mike90ds.lazyload.toggleterm\frequire\0" },
-    loaded = true,
-    path = "C:\\Users\\Work\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
+    keys = { { "", "<leader>tpy" }, { "", "<leader>lz" }, { "", "<leader>fl" }, { "", "<C-`>" }, { "", "<C-\\>" } },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "C:\\Users\\Work\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["typescript.nvim"] = {
@@ -315,43 +319,39 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: impatient.nvim
-time([[Config for impatient.nvim]], true)
-require('impatient')
-time([[Config for impatient.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require('mike90ds.lazyload.autopairs')
-time([[Config for nvim-autopairs]], false)
 -- Config for: tabline.nvim
 time([[Config for tabline.nvim]], true)
 try_loadstring("\27LJ\2\n�\4\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0'\2\f\0B\0\2\1K\0\1\0�\1              set guioptions-=e \" Use showtabline in gui vim\n              set sessionoptions+=tabpages,globals \" store tabpages and globals in session\n            \bcmd\bvim\foptions\23section_separators\1\3\0\0\b\b\25component_separators\1\0\n\19show_tabs_only\1\20modified_italic\2\18modified_icon\a+ \23show_filename_only\2 tabline_show_last_separator\2\15show_bufnr\1\fcolored\2\18show_devicons\2\21show_tabs_always\2\27max_bufferline_percent\3B\1\3\0\0\b\b\1\0\1\venable\2\nsetup\ftabline\frequire\0", "config", "tabline.nvim")
 time([[Config for tabline.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require('mike90ds.lazyload.autopairs')
+time([[Config for nvim-autopairs]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 require('mike90ds.lazyload.treesitter')
 time([[Config for nvim-treesitter]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\n<\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0!mike90ds.lazyload.toggleterm\frequire\0", "config", "toggleterm.nvim")
-time([[Config for toggleterm.nvim]], false)
--- Config for: neo-tree.nvim
-time([[Config for neo-tree.nvim]], true)
-try_loadstring("\27LJ\2\n�\6\0\0\6\0\27\0+6\0\0\0009\0\1\0009\0\2\0'\2\3\0005\3\4\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\5\0005\3\6\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\a\0005\3\b\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\t\0005\3\n\0B\0\3\0016\0\v\0'\2\f\0B\0\2\0029\0\r\0005\2\14\0005\3\16\0005\4\15\0=\4\17\0035\4\18\0=\4\19\0035\4\21\0005\5\20\0=\5\22\4=\4\23\3=\3\24\0025\3\25\0=\3\26\2B\0\2\1K\0\1\0\15filesystem\1\0\1\26hijack_netrw_behavior\rdisabled\30default_component_configs\15git_status\fsymbols\1\0\0\1\0\t\14untracked\b\fignored\b\rmodified\5\runstaged\b\vstaged\b\rconflict\b\frenamed\b\fdeleted\b✖\nadded\5\ticon\1\0\5\fdefault\6*\18folder_closed\b\14highlight\20NeoTreeFileIcon\16folder_open\b\17folder_empty\bﰊ\14container\1\0\0\1\0\1\26enable_character_fade\2\1\0\4\25close_if_last_window\1\23enable_diagnostics\2\23popup_border_style\frounded\22enable_git_status\2\nsetup\rneo-tree\frequire\1\0\2\vtexthl\23DiagnosticSignHint\ttext\b\23DiagnosticSignHint\1\0\2\vtexthl\23DiagnosticSignInfo\ttext\t \23DiagnosticSignInfo\1\0\2\vtexthl\23DiagnosticSignWarn\ttext\t \23DiagnosticSignWarn\1\0\2\vtexthl\24DiagnosticSignError\ttext\t \24DiagnosticSignError\16sign_define\afn\bvim\0", "config", "neo-tree.nvim")
-time([[Config for neo-tree.nvim]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\30mike90ds.lazyload.nvimcmp\frequire\0", "config", "nvim-cmp")
 time([[Config for nvim-cmp]], false)
+-- Config for: neo-tree.nvim
+time([[Config for neo-tree.nvim]], true)
+try_loadstring("\27LJ\2\n�\6\0\0\6\0\27\0+6\0\0\0009\0\1\0009\0\2\0'\2\3\0005\3\4\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\5\0005\3\6\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\a\0005\3\b\0B\0\3\0016\0\0\0009\0\1\0009\0\2\0'\2\t\0005\3\n\0B\0\3\0016\0\v\0'\2\f\0B\0\2\0029\0\r\0005\2\14\0005\3\16\0005\4\15\0=\4\17\0035\4\18\0=\4\19\0035\4\21\0005\5\20\0=\5\22\4=\4\23\3=\3\24\0025\3\25\0=\3\26\2B\0\2\1K\0\1\0\15filesystem\1\0\1\26hijack_netrw_behavior\17open_default\30default_component_configs\15git_status\fsymbols\1\0\0\1\0\t\runstaged\b\rconflict\b\rmodified\5\14untracked\b\frenamed\b\fdeleted\b✖\vstaged\b\nadded\5\fignored\b\ticon\1\0\5\16folder_open\b\18folder_closed\b\fdefault\6*\14highlight\20NeoTreeFileIcon\17folder_empty\bﰊ\14container\1\0\0\1\0\1\26enable_character_fade\2\1\0\4\23popup_border_style\frounded\25close_if_last_window\1\23enable_diagnostics\2\22enable_git_status\2\nsetup\rneo-tree\frequire\1\0\2\vtexthl\23DiagnosticSignHint\ttext\b\23DiagnosticSignHint\1\0\2\vtexthl\23DiagnosticSignInfo\ttext\t \23DiagnosticSignInfo\1\0\2\vtexthl\23DiagnosticSignWarn\ttext\t \23DiagnosticSignWarn\1\0\2\vtexthl\24DiagnosticSignError\ttext\t \24DiagnosticSignError\16sign_define\afn\bvim\0", "config", "neo-tree.nvim")
+time([[Config for neo-tree.nvim]], false)
+-- Config for: impatient.nvim
+time([[Config for impatient.nvim]], true)
+require('impatient')
+time([[Config for impatient.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-ts-autotag ]]
 vim.cmd [[ packadd telescope.nvim ]]
 vim.cmd [[ packadd telescope-live-grep-args.nvim ]]
 
 -- Config for: telescope-live-grep-args.nvim
 try_loadstring("\27LJ\2\n(\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\0�\19live_grep_args�\1\1\0\a\0\f\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\4\0009\0\3\0006\1\5\0009\1\6\0019\1\a\1'\3\b\0'\4\t\0003\5\n\0005\6\v\0B\1\5\0012\0\0�K\0\1\0\1\0\1\tdesc6[Telescope] live grep with args (defaults to cwd)\0\16<leader>trg\6n\bset\vkeymap\bvim\15extensions\19live_grep_args\19load_extension\14telescope\frequire\0", "config", "telescope-live-grep-args.nvim")
 
-vim.cmd [[ packadd nvim-ts-autotag ]]
 time([[Sequenced loading]], false)
 
 -- Command lazy-loads
@@ -363,13 +363,36 @@ pcall(vim.api.nvim_create_user_command, 'ZenMode', function(cmdargs)
           require('packer.load')({'zen-mode.nvim'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('ZenMode ', 'cmdline')
       end})
+pcall(vim.api.nvim_create_user_command, 'ToggleTerm', function(cmdargs)
+          require('packer.load')({'toggleterm.nvim'}, { cmd = 'ToggleTerm', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'toggleterm.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('ToggleTerm ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'ToggleTermToggleAll', function(cmdargs)
+          require('packer.load')({'toggleterm.nvim'}, { cmd = 'ToggleTermToggleAll', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'toggleterm.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('ToggleTermToggleAll ', 'cmdline')
+      end})
 time([[Defining lazy-load commands]], false)
+
+-- Keymap lazy-loads
+time([[Defining lazy-load keymaps]], true)
+vim.cmd [[noremap <silent> <C-\> <cmd>lua require("packer.load")({'toggleterm.nvim'}, { keys = "<lt>C-\\>", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> <leader>lz <cmd>lua require("packer.load")({'toggleterm.nvim'}, { keys = "<lt>leader>lz", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> <leader>tpy <cmd>lua require("packer.load")({'toggleterm.nvim'}, { keys = "<lt>leader>tpy", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> <C-`> <cmd>lua require("packer.load")({'toggleterm.nvim'}, { keys = "<lt>C-`>", prefix = "" }, _G.packer_plugins)<cr>]]
+vim.cmd [[noremap <silent> <leader>fl <cmd>lua require("packer.load")({'toggleterm.nvim'}, { keys = "<lt>leader>fl", prefix = "" }, _G.packer_plugins)<cr>]]
+time([[Defining lazy-load keymaps]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'indent-blankline.nvim', 'zen-mode.nvim', 'Comment.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'zen-mode.nvim', 'Comment.nvim', 'indent-blankline.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 
