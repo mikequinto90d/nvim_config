@@ -51,7 +51,18 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
-vim.opt.shell = "zsh"
+-- vim.opt.shellcmdflag = "-c"
+-- vim.opt.shell = "/usr/bin/bash"
+-- vim.opt.shell = "/c/Program Files/Git/bin/bash.exe"
+-- vim.opt.shell = "/c/Program Files/Git/bin/bash"
+
+-- https://github.com/neovim/neovim/issues/14605
+vim.opt.shell = "cmd.exe"
+-- vim.opt.shell = "C:\\Program Files\\Git\\bin\\bash.exe"
+-- ter " ok
+-- ter C://Windows//System32//cmd.exe " ok cmd and bash
+-- ter "C://Program Files//Git//bin//bash.exe" " ok only cmd
+-- ter "'C:/Program Files/Git/bin/bash.exe'" " ok only bash and let &shellcmdflag = '-c'
 
 -- ignore case if lowercase, but will not if something is uppercased
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
