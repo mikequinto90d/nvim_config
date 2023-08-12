@@ -25,8 +25,10 @@ treesitter.setup({
     incremental_selection = {
         enable = true,
         keymaps = {
-            init_selection = "<C-space>",
-            node_incremental = "<C-space>",
+            -- init_selection = "<S-.>",
+            init_selection = "@",
+            -- node_incremental = "<S-.>",
+            node_incremental = "@",
             scope_incremental = "<nop>",
             node_decremental = "<bs>",
         },
